@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+form > div{margin: 21px 12px;
+    width:721px;
+    border-bottom: solid 1px #ccc;
+    padding-bottom: 8px;
+}
+
+input,select,textarea{ padding:4px;}
+
+label,.yobo span{display:inline-block; width: 15em;}
+/*label:after {content: "必須 "; color: red;
+    font-size: 0.8em;
+}  読み上げに対応しない書き方*/
+label em{color:red; font-size: 0.8em;}
+
+input[name="addr"]{width:269px;}
+
+.yobo span{vertical-align: top;}
+
+.button{text-align: center;
+    padding: 25px 0; 
+}

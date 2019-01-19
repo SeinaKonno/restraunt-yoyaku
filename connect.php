@@ -2,8 +2,8 @@
 
 $host = 'localhost';
   $dbname = 'yoyaku';
-  $user = 'genn';
-  $pswd = 'genn0128'; //接続情報は変数にいれましょう
+  $user = '****';
+  $pswd = '****'; //接続情報は変数にいれましょう
 
 try{  //つながったら有効にする
   $dsn="mysql:dbname=$dbname;host=$host;charset=utf8";

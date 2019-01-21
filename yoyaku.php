@@ -27,9 +27,15 @@ $_SESSION["himitsu"]= makeRandStr(20);
 <label>ご希望のコース</label>
 <select name="course" required>
   <option value="">コースを選んでください</option>
-  <option>ディナー/伊勢志摩の祝宴コース ¥18500</option>
-  <option>ディナー/神楽坂の晩餐コース ¥15000</option>
-  <option>ディナー/神楽坂の晩餐コース ¥13500</option>
+<?php
+$filepath = "Book1.csv";
+$fp = fopen($filepath, "r");
+ while (($line = fgetcsv($fp))!==FALSE){
+   mb_convert_variables('UTF-8', 'sjis-win', $line);
+   echo "<option>" ,$line[0] , $line[1],"</option>";
+ }
+?>
+
 </select>
 </div>
 

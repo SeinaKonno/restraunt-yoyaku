@@ -32,7 +32,9 @@ $filepath = "Book1.csv";
 $fp = fopen($filepath, "r");
  while (($line = fgetcsv($fp))!==FALSE){
    mb_convert_variables('UTF-8', 'sjis-win', $line);
-   echo "<option>" ,$line[0] , $line[1],"</option>";
+   //¥が\になるので文字置換する
+   $kakaku = str_replace('\\','¥',$line[1]);
+   echo "<option>", $line[0], $kakaku, "</option>";
  }
 ?>
 
